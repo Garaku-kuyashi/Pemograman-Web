@@ -1,0 +1,81 @@
+body{
+    margin: 0; 
+    font-family: sans-serif; 
+    height: 100vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    background: linear-gradient(to bottom, #C5BAFF, #F6BBFB);
+}
+
+.container{
+    background: rgba(255, 255, 255, 0.5); 
+    width: 300px; 
+    padding: 40px; 
+    border-radius: 20px; 
+    text-align: center; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h2{
+    font-size: 35px; 
+    font-weight: bold; 
+    margin-bottom: 30px;
+}
+
+.input{
+    text-align: left; 
+    margin-bottom: 30px;
+}
+
+.isi{
+    background: transparent;
+    border: none;
+    width: 100%;
+    padding: 8px;
+    border-bottom: 2px solid black;
+    outline: none;
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+label{
+    font-size: 14px;
+}
+
+button{
+    padding: 10px; 
+    border: none; 
+    border-radius: 10px; 
+    background-color: #C5BAFF; 
+    font-weight: bold; 
+    cursor: pointer; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    width: 100%; 
+    color: black;
+    transition:  0.3s;
+}
+
+button:hover{
+    background-color: #3b2fe7;
+    color: #ffffff;
+}
+
+p{
+    text-align: center;
+}
+
+#errorMsg {
+    margin-top: 8px;
+    color: red;
+    font-size: 14px;
+}
+
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
