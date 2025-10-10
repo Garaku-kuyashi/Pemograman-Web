@@ -141,7 +141,7 @@ if (isset($_GET['user']) && $_GET['user'] === $username) {
                     echo '<h3 class="product-name">' . htmlspecialchars($row['nama_produk']) . '</h3>';
                     echo '<span class="product-type">' . htmlspecialchars($row['tipe_produk']) . '</span>';
                     echo '<span class="product-category">' . htmlspecialchars($row['kategori_produk']) . '</span>';
-                    echo '<p class="product-price">Rp ' . number_format($row['harga_produk'], 0, ',', '.') . '</p>';
+                    echo '<p class="product-price">$' . number_format($row['harga_produk'], 0, ',', '.') . '</p>';
 
                     echo '<div style="margin-top: 10px;">';
                     echo '<a href="edit.php?id=' . $row['id_produk'] . '" style="color: blue; margin-right: 10px;">Edit</a>';
