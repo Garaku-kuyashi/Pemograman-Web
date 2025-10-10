@@ -32,7 +32,7 @@ if (isset($_GET['user']) && $_GET['user'] === $username) {
                 <a href="#">Home</a>
                 <a href="#category">Kategori</a>
                 <a href="#product">Produk</a>
-                <a href="#testimonials">Testinomi</a>
+                <a href="#testimonials">Testimoni</a>
                 <a href="#contact">Hubungi kami</a>
             </nav>
             <div class="icon">
@@ -42,12 +42,14 @@ if (isset($_GET['user']) && $_GET['user'] === $username) {
             <a href="logout.php"><button class="btn-primary">Log out</button></a>
         </div>
     </header>
+
+    <!-- HERO SECTION -->
     <section class="hero">
         <div class="hero-top">
             <div class="hero-section">
                 <h1 class="hero-title">Welcome to NekoNeko Halo, <?php echo htmlspecialchars($displayUser); ?>  <span class="title-span">San</span></h1>
                 <p class="hero-subtitle">Mari hiasi kamar dengan waifu dan husbu kalian</p>
-                <a href=""><button class="btn-secondary">Mari Khilaf</button></a>
+                <a href="create.php"><button class="btn-secondary">Tambah</button></a>
             </div>
             <img class="hero-img" src="./img/picture.png" alt="NekoNeko Figure">
         </div>
@@ -77,6 +79,7 @@ if (isset($_GET['user']) && $_GET['user'] === $username) {
         </div>
     </section>
 
+    <!-- CATEGORY SECTION -->
     <section class="category-section" id="category">
         <h2 class="category-title">Bermacam-macam Kategori</h2>
         <div class="category-grid" id="categoryGrid">
@@ -119,94 +122,44 @@ if (isset($_GET['user']) && $_GET['user'] === $username) {
         </div>
     </section>
 
+    <!-- PRODUCT SECTION (CRUD) -->
     <section id="product" class="product">
         <h2 class="section-title">Produk Kami</h2>
+
         <div class="products-grid" id="productsGrid">
-            <div class="product-card animate">
-                <img src="./img/figure/castorice.jpg" alt="Castorice" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-name">Castorice</h3>
-                    <span class="product-type">Figure</span>
-                    <span class="product-category">Honkai Starail</span>
-                    <p class="product-price">$89.99</p>
-                    <button class="add-to-cart" data-id="1" data-name="Castorice" data-price="89.99" data-image="https://placehold.co/400x400/8a2be2/ffffff?text=Castorice" data-type="figure" data-series="Honkai Starail">Add to Cart</button>
-                </div>
-            </div>
-            <div class="product-card animate">
-                <img src="./img/figure/shiroko.jpg" alt="shiroko" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-name">Sunaokami Shiroko</h3>
-                    <span class="product-type">Figma</span>
-                    <span class="product-category">Blue Archive</span>
-                    <p class="product-price">$94.99</p>
-                    <button class="add-to-cart" data-id="2" data-name="Sunaokami Shiroko" data-price="94.99" data-image="https://placehold.co/400x400/9d4edd/ffffff?text=SunaokamiShiroko" data-type="figma" data-series="bluearchive">Add to Cart</button>
-                </div>
-            </div>
-            <div class="product-card animate">
-                <img src="./img/figure/kiana.jpg" alt="kiana" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-name">Kiana Kaslana</h3>
-                    <span class="product-type">Figure</span>
-                    <span class="product-category">Honkai Impact 3rd</span>
-                    <p class="product-price">$99.99</p>
-                    <button class="add-to-cart" data-id="3" data-name="Kiana Kaslana" data-price="99.99" data-image="https://placehold.co/400x400/ff6b6b/ffffff?text=HonkaiImpact3rd" data-type="figure" data-series="HonkaiImpact3rd">Add to Cart</button>
-                </div>
-            </div>
-            <div class="product-card animate">
-                <img src="./img/figure/w.jpg" alt="w"class="product-image">
-                <div class="product-info">
-                    <h3 class="product-name">W</h3>
-                    <span class="product-type">Figure</span>
-                    <span class="product-category">Arknights</span>
-                    <p class="product-price">$87.99</p>
-                    <button class="add-to-cart" data-id="4" data-name="w" data-price="87.99" data-image="https://placehold.co/400x400/4ecdc4/ffffff?text=w" data-type="figure" data-series="arknights">Add to Cart</button>
-                </div>
-            </div>
-            
-            <div class="product-card animate">
-                <img src="./img/figure/citlali.jpg" alt="citlali" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-name">Citlali</h3>
-                    <span class="product-type">Figure</span>
-                    <span class="product-category">Genshin Impact</span>
-                    <p class="product-price">$49.99</p>
-                    <button class="add-to-cart" data-id="5" data-name="citlali" data-price="49.99" data-image="https://placehold.co/400x400/8a2be2/ffffff?text=Citlali" data-type="figure" data-series="genshinimpact">Add to Cart</button>
-                </div>
-            </div>
-            <div class="product-card animate">
-                <img src="./img/figure/smart falcon.jpg" alt="smart falcon" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-name">Smart Falcon</h3>
-                    <span class="product-type">Figure</span>
-                    <span class="product-category">Uma Musume</span>
-                    <p class="product-price">$54.99</p>
-                    <button class="add-to-cart" data-id="6" data-name="Smart Falcon" data-price="54.99" data-image="https://placehold.co/400x400/9d4edd/ffffff?text=Smartfalcon" data-type="figure" data-series="umamusume">Add to Cart</button>
-                </div>
-            </div>
-            <div class="product-card animate">
-                <img src="./img/figure/mizuki.jpg" alt="mizuki" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-name">Yumemizuki Mizuki</h3>
-                    <span class="product-type">Figure</span>
-                    <span class="product-category">Genshin Impact</span>
-                    <p class="product-price">$59.99</p>
-                    <button class="add-to-cart" data-id="7" data-name="mizuki" data-price="59.99" data-image="https://placehold.co/400x400/ff6b6b/ffffff?text=mizuki" data-type="figure" data-series="genshinimpact">Add to Cart</button>
-                </div>
-            </div>
-            <div class="product-card animate">
-                <img src="./img/figure/elysia.jpg" alt="elysia" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-name">elysia</h3>
-                    <span class="product-type">Nendoroid</span>
-                    <span class="product-category">Honkai Impact 3rd</span>
-                    <p class="product-price">$47.99</p>
-                    <button class="add-to-cart" data-id="8" data-name="elysia" data-price="47.99" data-image="https://placehold.co/400x400/4ecdc4/ffffff?text=elysia" data-type="nendoroid" data-series="HonkaiImpact3rd">Add to Cart</button>
-                </div>
-            </div>
+
+            <?php
+            include 'koneksi.php';
+
+            $result = $conn->query("SELECT * FROM produk ORDER BY id_produk DESC");
+
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    echo '<div class="product-card animate">';
+                    echo '<img src="img/figure/' . htmlspecialchars($row['gambar_produk']) . '" alt="' . htmlspecialchars($row['nama_produk']) . '" class="product-image">';
+                    echo '<div class="product-info">';
+                    echo '<h3 class="product-name">' . htmlspecialchars($row['nama_produk']) . '</h3>';
+                    echo '<span class="product-type">' . htmlspecialchars($row['tipe_produk']) . '</span>';
+                    echo '<span class="product-category">' . htmlspecialchars($row['kategori_produk']) . '</span>';
+                    echo '<p class="product-price">Rp ' . number_format($row['harga_produk'], 0, ',', '.') . '</p>';
+
+                    echo '<div style="margin-top: 10px;">';
+                    echo '<a href="edit.php?id=' . $row['id_produk'] . '" style="color: blue; margin-right: 10px;">Edit</a>';
+                    echo '<a href="delete.php?id=' . $row['id_produk'] . '" onclick="return confirm(\'Yakin hapus produk ini?\')" style="color: red;">Hapus</a>';
+                    echo '</div>';
+
+                    echo '</div>';
+                    echo '</div>';
+                }
+            } else {
+                echo '<p style="text-align: center; font-size: 1.2em; color: #666;">Belum ada produk. Silakan tambahkan!</p>';
+            }
+            ?>
+
         </div>
     </section>
 
-    
+    <!-- TESTIMONIALS SECTION -->
     <section id="testimonials" class="testimonials">
         <h2 class="section-title">Customer Reviews</h2>
         <div class="testimonials-grid">
@@ -252,7 +205,8 @@ if (isset($_GET['user']) && $_GET['user'] === $username) {
             </div>
         </div>
     </section>
-    
+
+    <!-- CONTACT SECTION -->
     <section id="contact" class="contact">
         <h1>Silahkan Hubungi Kami</h1>
         <p>Jika ada pertanyaan, silahkan hubungi kami melalui form dibawah ini</p>
@@ -262,52 +216,53 @@ if (isset($_GET['user']) && $_GET['user'] === $username) {
         </form>
     </section>
 
+    <!-- FOOTER -->
     <footer class="footer">
-    <div class="footer-content">
-        <div class="footer-brand">
-        <div class="logo-foot">NEKO<span>NEKO</span></div>
-        <p class="brand-desc">Memberdayakan otaku dengan figur anime premium. Dapatkan waifu dan husbu-mu hari ini</p>
-        <div class="footer-social">
-        <a href="#"><i class="fa-brands fa-x"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-        </div>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo-foot">NEKO<span>NEKO</span></div>
+                <p class="brand-desc">Memberdayakan otaku dengan figur anime premium. Dapatkan waifu dan husbu-mu hari ini</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fa-brands fa-x"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="link-col">
+                    <h4>Site Map</h4>
+                    <ul>
+                        <li><a href="#">Homepage</a></li>
+                        <li><a href="#">Kategori</a></li>
+                        <li><a href="#">Produk</a></li>
+                        <li><a href="#">Hubungi Kami</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="link-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
-        <div class="footer-links">
-        <div class="link-col">
-            <h4>Site Map</h4>
-            <ul>
-            <li><a href="#">Homepage</a></li>
-            <li><a href="#">Kategori</a></li>
-            <li><a href="#">Produk</a></li>
-            <li><a href="#">Hubungi Kami</a></li>
-            <li><a href="#">FAQ</a></li>
-            </ul>
+        <div class="footer-bottom">
+            <p>Copyright © 2025 NekoNeko Figure. All Rights Reserved.</p>
         </div>
-        <div class="link-col">
-            <h4>Legal</h4>
-            <ul>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Refund Policy</a></li>
-            </ul>
-        </div>
-        </div>
-    </div>
-
-    <div class="footer-bottom">
-        <p>Copyright © 2025 NekoNeko Figure. All Rights Reserved.</p>
-    </div>
     </footer>
 
-
     <script src="./source/script.js"></script>
-    
+
     <?php if (isset($_GET['user'])): ?>
-        <div style="margin-top: 20px; padding: 10px; background: #f0f0f0; border-radius: 5px;">
+        <div style="margin-top: 20px; padding: 10px; background: #f0f0f0; border-radius: 5px; text-align: center;">
             <strong>Query String:</strong> User yang ditampilkan via URL: <code><?php echo htmlspecialchars($_GET['user']); ?></code>
         </div>
-        <?php endif; ?>
-    </body>
+    <?php endif; ?>
+
+</body>
 </html>

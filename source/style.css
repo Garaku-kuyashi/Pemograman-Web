@@ -140,8 +140,8 @@ body {
 
 .btn-secondary{
     background-color: #f9ccb3;
-    width: 200px;
-    height: 50px;
+    width: 250px;
+    height: 75px;
     border: none;
     border-radius: 30px;
     font-size: 25px;
@@ -660,8 +660,8 @@ body {
   }
 
   .btn-secondary {
-    width: 180px;
-    height: 45px;
+    width: 250px;
+    height: 65px;
     font-size: 22px;
   }
 
