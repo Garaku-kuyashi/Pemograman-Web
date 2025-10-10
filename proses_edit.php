@@ -39,7 +39,7 @@ if (!empty($new_image)) {
     } else {
         die("upload gagal");
     }
-} else {
+} else {    
     $gambar_produk = $old_image;
 }
 
